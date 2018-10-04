@@ -3,7 +3,6 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-
         <record model="ir.action.act_window" id="act_asset_lines">
             <field name="name">Asset Lines</field>
             <field name="res_model">account.asset.line</field>
@@ -20,6 +19,5 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <menuitem parent="account_asset.menu_asset_form" sequence="10"
             action="act_asset_lines" id="menu_asset_lines"/>
-
     </data>
 </tryton>

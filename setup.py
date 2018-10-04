@@ -4,7 +4,7 @@
 from setuptools import setup
 import re
 import os
-import ConfigParser
+from configparser import ConfigParser
 
 MODULE = 'account_asset_show_lines'
 PREFIX = 'nantic'
