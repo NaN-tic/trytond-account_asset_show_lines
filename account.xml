@@ -19,5 +19,15 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <menuitem parent="account_asset.menu_asset_form" sequence="10"
             action="act_asset_lines" id="menu_asset_lines"/>
+
+        <record model="ir.rule.group" id="rule_group_asset_lines">
+            <field name="name">User in company for account Asset</field>
+            <field name="model" search="[('model', '=', 'account.asset.line')]"/>
+            <field name="global_p" eval="True"/>
+        </record>
+        <record model="ir.rule" id="rule_asset_lines">
+            <field name="domain" eval="[('asset.company', '=', Eval('user' ,{}).get('company', None))]" pyson="1" />
+            <field name="rule_group" ref="rule_group_asset_lines"/>
+        </record>
     </data>
 </tryton>
