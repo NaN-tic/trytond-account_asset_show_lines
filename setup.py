@@ -76,12 +76,13 @@ requires += get_requires('depends')
 
 tests_require = [
     get_require_version('proteus'),
-    
+
     ]
 tests_require += get_requires('extras_depend')
 requires += [get_require_version('trytond_account_asset')]
 
 dependency_links = []
+
 
 if minor_version % 2:
     # Add development index for testing with proteus
