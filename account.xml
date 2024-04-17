@@ -22,7 +22,7 @@ this repository contains the full copyright notices and license terms. -->
 
         <record model="ir.rule.group" id="rule_group_asset_lines_companies">
             <field name="name">User in companies</field>
-            <field name="model" search="[('model', '=', 'account.asset.line')]"/>
+            <field name="model">account.asset.line</field>
             <field name="global_p" eval="True"/>
         </record>
         <record model="ir.rule" id="rule_asset_lines_companies">
